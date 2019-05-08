@@ -64,6 +64,10 @@ const bearerToken = () => {
   return cookie.load('auth');
 };
 
+const deleteAction = profile => ({
+  type: 'DELETE',
+})
+
 const initAction = profile => ({
   type: 'INIT',
   payload: profile,

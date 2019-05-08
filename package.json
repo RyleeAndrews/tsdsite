@@ -2,6 +2,13 @@
   "name": "totalscreenwebsite",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+  "node": "11.x"
+},
+"cacheDirectories": [
+  "node_modules",
+  " ui/node_modules"
+],
   "dependencies": {
     "aws-sdk": "^2.450.0",
     "bcrypt": "^3.0.6",
@@ -24,13 +31,14 @@
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
+    "redux": "^4.0.1",
     "require-dir": "^1.2.0",
     "superagent": "^5.0.5",
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node index.js",
+    "build": "cd ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
